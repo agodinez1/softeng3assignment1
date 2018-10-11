@@ -11,16 +11,16 @@ import org.joda.time.DateTime;
  *
  */
 
-public class CourseProgramme {
+public class Course {
 	
 	private String courseName;
 	private List<Student> enrolledStudents;
 	private DateTime academicStartDate;
 	private DateTime academicEndDate;
 	
-	public CourseProgramme() {}
+	public Course() {}
 	
-	public CourseProgramme(String courseName, List<Student> enrolledStudents, DateTime academicStartDate,
+	public Course(String courseName, List<Student> enrolledStudents, DateTime academicStartDate,
 			DateTime academicEndDate) {
 		this.courseName = courseName;
 		this.enrolledStudents = enrolledStudents;

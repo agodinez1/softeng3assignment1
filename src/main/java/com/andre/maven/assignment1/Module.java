@@ -13,9 +13,11 @@ public class Module {
 
 	private String moduleName;
 	private List<Student> enrolledStudents;
-	private List<CourseProgramme> coursesAssociated;
+	private List<Course> coursesAssociated;
 	
-	public Module(String moduleName, List<Student> enrolledStudents, List<CourseProgramme> coursesAssociated) {
+	public Module() {}
+	
+	public Module(String moduleName, List<Student> enrolledStudents, List<Course> coursesAssociated) {
 		this.moduleName = moduleName;
 		this.enrolledStudents = enrolledStudents;
 		this.coursesAssociated = coursesAssociated;
@@ -37,11 +39,11 @@ public class Module {
 		this.enrolledStudents = enrolledStudents;
 	}
 
-	public List<CourseProgramme> getCoursesAssociated() {
+	public List<Course> getCoursesAssociated() {
 		return coursesAssociated;
 	}
 
-	public void setCoursesAssociated(List<CourseProgramme> coursesAssociated) {
+	public void setCoursesAssociated(List<Course> coursesAssociated) {
 		this.coursesAssociated = coursesAssociated;
 	}
 	

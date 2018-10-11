@@ -18,13 +18,13 @@ public class Student {
 	private DateTime studentDOB;
 	private int studentId;
 	private String studentUsername;
-	private List<CourseProgramme> studentCourses;
+	private List<Course> studentCourses;
 	private List<Module> studentModules;
 	
 	public Student() {}
 	
 	public Student(String studentName, int studentAge, DateTime studentDOB, int studentId, String studentUsername,
-			List<CourseProgramme> studentCourses, List<Module> studentModules) {
+			List<Course> studentCourses, List<Module> studentModules) {
 		this.studentName = studentName;
 		this.studentAge = studentAge;
 		this.studentDOB = studentDOB;
@@ -34,6 +34,10 @@ public class Student {
 		this.studentModules = studentModules;
 	}
 
+	public String getUsername() {
+		return getStudentName()+getStudentAge();
+	}
+	
 	public String getStudentName() {
 		return studentName;
 	}
@@ -74,11 +78,11 @@ public class Student {
 		this.studentUsername = studentUsername;
 	}
 
-	public List<CourseProgramme> getStudentCourses() {
+	public List<Course> getStudentCourses() {
 		return studentCourses;
 	}
 
-	public void setStudentCourses(List<CourseProgramme> studentCourses) {
+	public void setStudentCourses(List<Course> studentCourses) {
 		this.studentCourses = studentCourses;
 	}
 
