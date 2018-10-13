@@ -1,0 +1,14 @@
+#### CI CONFIG
+
+language:  java
+
+jdk:
+  - oraclejdk8
+  
+branches:
+  only:
+    - master
+
+build:
+	ci: 
+	- mvn clean install
