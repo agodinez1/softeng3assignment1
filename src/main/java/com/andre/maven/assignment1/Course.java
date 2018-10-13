@@ -1,55 +1,63 @@
 package com.andre.maven.assignment1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.joda.time.DateTime;
 
 /**
- * Course Programme class
+ * Course class
  * 
  * @author Andre Godinez - 15460718
  *
  */
 
 public class Course {
-	
+
 	private String courseName;
 	private List<Student> enrolledStudents;
+	private List<Module> associatedModules;
 	private DateTime academicStartDate;
 	private DateTime academicEndDate;
-	
-	public Course() {}
-	
-	public Course(String courseName, List<Student> enrolledStudents, DateTime academicStartDate,
-			DateTime academicEndDate) {
+
+	public Course(String courseName, DateTime academicStartDate, DateTime academicEndDate) {
 		this.courseName = courseName;
-		this.enrolledStudents = enrolledStudents;
+		this.enrolledStudents = new ArrayList<Student>();
+		;
+		this.associatedModules = new ArrayList<Module>();
 		this.academicStartDate = academicStartDate;
 		this.academicEndDate = academicEndDate;
 	}
-	
-	public String getCourseName() {
-		return courseName;
+
+	public void showCourseInfo() {
+		System.out.print("COURSE_NAME: " + this.courseName + " ACADEMIC_START_DATE: "
+				+ this.academicStartDate.toString("dd/MM/YYYY") + " ACADEMIC_END_DATE: "
+				+ this.academicEndDate.toString("dd/MM/YYYY"));
 	}
-	public void setCourseName(String courseName) {
-		this.courseName = courseName;
+
+	public void showCourseModules() {
+		System.out.println("\n COURSE MODULES: ");
+		for (Module module : associatedModules) {
+			System.out.println("\n \t MODULE_NAME: " + module.getModuleName());
+			System.out.println("\t ASSOCIATED STUDENTS:");
+			module.printStudents();
+		}
 	}
-	public List<Student> getEnrolledStudents() {
-		return enrolledStudents;
+
+	public void enrollStudent(Student s) {
+		this.enrolledStudents.add(s);
 	}
-	public void setEnrolledStudents(List<Student> enrolledStudents) {
-		this.enrolledStudents = enrolledStudents;
+
+	public void addModule(Module m) {
+		this.associatedModules.add(m);
 	}
+
 	public DateTime getAcademicStartDate() {
 		return academicStartDate;
 	}
-	public void setAcademicStartDate(DateTime academicStartDate) {
-		this.academicStartDate = academicStartDate;
-	}
+
 	public DateTime getAcademicEndDate() {
 		return academicEndDate;
 	}
-	public void setAcademicEndDate(DateTime academicEndDate) {
-		this.academicEndDate = academicEndDate;
-	}
+
 }

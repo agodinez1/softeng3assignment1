@@ -1,5 +1,6 @@
 package com.andre.maven.assignment1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,37 +15,35 @@ public class Module {
 	private String moduleName;
 	private List<Student> enrolledStudents;
 	private List<Course> coursesAssociated;
-	
-	public Module() {}
-	
-	public Module(String moduleName, List<Student> enrolledStudents, List<Course> coursesAssociated) {
+
+	public Module(String moduleName) {
 		this.moduleName = moduleName;
-		this.enrolledStudents = enrolledStudents;
-		this.coursesAssociated = coursesAssociated;
+		this.enrolledStudents = new ArrayList<Student>();
+		this.coursesAssociated = new ArrayList<Course>();
 	}
 
 	public String getModuleName() {
 		return moduleName;
 	}
 
-	public void setModuleName(String moduleName) {
-		this.moduleName = moduleName;
+	public void addStudents(Student e) {
+		this.enrolledStudents.add(e);
 	}
 
-	public List<Student> getEnrolledStudents() {
-		return enrolledStudents;
+	public void addCoursesAssociated(Course c) {
+		this.coursesAssociated.add(c);
 	}
 
-	public void setEnrolledStudents(List<Student> enrolledStudents) {
-		this.enrolledStudents = enrolledStudents;
+	public void printStudents() {
+		for (Student s : this.enrolledStudents) {
+			System.out
+					.print("\t\t NAME: " + s.getStudentName() + ' ' + "DOB: " + s.getStudentDOB().toString("YYYY/MM/dd")
+							+ ' ' + "AGE: " + s.getStudentAge() + ' ' + "USERNAME: " + s.getUsername());
+			s.listStudentModules();
+			s.listStudentCourses();
+			System.out.println();
+		}
+
 	}
 
-	public List<Course> getCoursesAssociated() {
-		return coursesAssociated;
-	}
-
-	public void setCoursesAssociated(List<Course> coursesAssociated) {
-		this.coursesAssociated = coursesAssociated;
-	}
-	
 }

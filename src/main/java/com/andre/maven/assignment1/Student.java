@@ -13,7 +13,7 @@ import org.joda.time.Years;
  *
  */
 
-public class Student {	
+public class Student {
 
 	private String studentName;
 	private int studentAge;
@@ -21,7 +21,7 @@ public class Student {
 	private int studentId;
 	private List<Course> studentCourses;
 	private List<Module> studentModules;
-	
+
 	public Student(String studentName, DateTime studentDOB, int studentId) {
 		this.studentName = studentName;
 		this.studentDOB = studentDOB;
@@ -33,7 +33,7 @@ public class Student {
 
 	private void calculateAge() {
 		Years age = Years.yearsBetween(studentDOB.toLocalDate(), DateTime.now().toLocalDate());
-		
+
 		this.studentAge = age.getYears();
 	}
 
@@ -62,7 +62,9 @@ public class Student {
 	}
 
 	public void listStudentCourses() {
-		// TODO
+		for (Course course : studentCourses) {
+			course.showCourseInfo();
+		}
 	}
 
 	public void addStudentModule(Module m) {
@@ -70,6 +72,9 @@ public class Student {
 	}
 
 	public void listStudentModules() {
-		// TODO
+		System.out.print(" MODULES: ");
+		for (Module m : this.studentModules) {
+			System.out.print(m.getModuleName() + ' ');
+		}
 	}
 }
