@@ -1,4 +1,4 @@
-package com.andre.maven.assignment1;
+package com.andre.maven.assignment1_a;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,11 @@
-package com.andre.maven.assignment1;
+package com.andre.maven.assignment1_a;
 
 import static org.junit.Assert.assertEquals;
 
 import org.joda.time.DateTime;
 import org.junit.Test;
+
+import com.andre.maven.assignment1_a.Student;
 
 /**
  * Unit test Student Class
