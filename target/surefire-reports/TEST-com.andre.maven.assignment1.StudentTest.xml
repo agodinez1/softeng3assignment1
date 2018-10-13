@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.andre.maven.assignment1.AppTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.andre.maven.assignment1.StudentTest" time="0.031" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
@@ -12,7 +12,7 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="US"/>
+    <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="c:\dev\apache-maven-3.5.4\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\ConEmu\ConEmu\Scripts;C:\Program Files\ConEmu;C:\Program Files\ConEmu\ConEmu;c:\dev\apache-maven-3.5.4\bin;C:\dev\apache-maven-3.5.4\bin;F:\dev\apps\Anaconda3;F:\dev\apps\Anaconda3\Lib;F:\dev\apps\Anaconda3\DLLs;c:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Users\forCSGOcozcantalttab\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\forCSGOcozcantalttab\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\bin;C:\Users\forCSGOcozcantalttab\AppData\Local\Microsoft\WindowsApps;C:\Users\forCSGOcozcantalttab\AppData\Roaming\npm;C:\Users\forCSGOcozcantalttab\AppData\Roaming\nvm;C:\Program Files\nodejs;;."/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\ConEmu\ConEmu\Scripts;C:\Program Files\ConEmu;C:\Program Files\ConEmu\ConEmu;c:\dev\apache-maven-3.5.4\bin;C:\dev\apache-maven-3.5.4\bin;F:\dev\apps\Anaconda3;F:\dev\apps\Anaconda3\Lib;F:\dev\apps\Anaconda3\DLLs;c:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Users\forCSGOcozcantalttab\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\forCSGOcozcantalttab\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\bin;C:\Users\forCSGOcozcantalttab\AppData\Local\Microsoft\WindowsApps;."/>
     <property name="maven.conf" value="c:\dev\apache-maven-3.5.4\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -65,5 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.andre.maven.assignment1.AppTest" name="testApp" time="0.002"/>
+  <testcase classname="com.andre.maven.assignment1.StudentTest" name="testGetUsername" time="0.031"/>
 </testsuite>

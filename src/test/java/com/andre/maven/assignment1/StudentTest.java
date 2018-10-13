@@ -29,34 +29,22 @@ public class StudentTest {
 //	
 //	Student Test Variables
 	private String studentName = "sampleName";
-	private int studentAge = 21;
-	private DateTime studentDOB = new DateTime(1997,10,03,0,0);
+	private DateTime studentDOB = new DateTime(1997,10,03,0,0,0,0);
 	private int studentId = 15406718;
-	private String studentUsername = "testUsername";
-	private List<Course> studentCourses = new ArrayList<Course>();
-	private List<Module> studentModules = new ArrayList<Module>();
 	
 	@Test
 	public void testGetUsername() {
 		
 		// Arrange
-		studentCourses.add(new Course());
-		studentModules.add(new Module());
-		
-		Student testStudent = new Student();
-		testStudent.setStudentName(studentName);
-		testStudent.setStudentAge(studentAge);
-		testStudent.setStudentDOB(studentDOB);
-		testStudent.setStudentId(studentId);
-		testStudent.setStudentUsername(studentUsername);
-		testStudent.setStudentCourses(studentCourses);
-		testStudent.setStudentModules(studentModules);
+		Student testStudent = new Student(studentName,studentDOB, studentId);
 		
 		// Test
 		String testUsername = testStudent.getUsername();
+		int studentAge = testStudent.getStudentAge();
 		
 		// Verify
-		assertEquals(testUsername, studentName+studentAge);
+		assertEquals(21, studentAge);
+		assertEquals(studentName+studentAge, testUsername);
 	}
 		
 	

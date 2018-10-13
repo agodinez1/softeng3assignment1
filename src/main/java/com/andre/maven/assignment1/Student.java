@@ -1,8 +1,14 @@
 package com.andre.maven.assignment1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.joda.time.DateTime;
+import org.joda.time.Interval;
+import org.joda.time.Period;
+import org.joda.time.Years;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 /**
  * Student class
@@ -11,87 +17,63 @@ import org.joda.time.DateTime;
  *
  */
 
-public class Student {
+public class Student {	
 
 	private String studentName;
 	private int studentAge;
 	private DateTime studentDOB;
 	private int studentId;
-	private String studentUsername;
 	private List<Course> studentCourses;
 	private List<Module> studentModules;
 	
-	public Student() {}
-	
-	public Student(String studentName, int studentAge, DateTime studentDOB, int studentId, String studentUsername,
-			List<Course> studentCourses, List<Module> studentModules) {
+	public Student(String studentName, DateTime studentDOB, int studentId) {
 		this.studentName = studentName;
-		this.studentAge = studentAge;
 		this.studentDOB = studentDOB;
 		this.studentId = studentId;
-		this.studentUsername = studentUsername;
-		this.studentCourses = studentCourses;
-		this.studentModules = studentModules;
+		this.studentCourses = new ArrayList<Course>();
+		this.studentModules = new ArrayList<Module>();
+		this.calculateAge();
+	}
+
+	private void calculateAge() {
+		Years age = Years.yearsBetween(studentDOB.toLocalDate(), DateTime.now().toLocalDate());
+		
+		this.studentAge = age.getYears();
 	}
 
 	public String getUsername() {
-		return getStudentName()+getStudentAge();
+		return getStudentName() + getStudentAge();
 	}
-	
+
 	public String getStudentName() {
 		return studentName;
 	}
-	
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
-	}
-	
+
 	public int getStudentAge() {
 		return studentAge;
-	}
-	
-	public void setStudentAge(int studentAge) {
-		this.studentAge = studentAge;
 	}
 
 	public DateTime getStudentDOB() {
 		return studentDOB;
 	}
 
-	public void setStudentDOB(DateTime studentDOB) {
-		this.studentDOB = studentDOB;
-	}
-
 	public int getStudentId() {
 		return studentId;
 	}
 
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
+	public void addStudentCourse(Course c) {
+		this.studentCourses.add(c);
 	}
 
-	public String getStudentUsername() {
-		return studentUsername;
+	public void listStudentCourses() {
+		// TODO
 	}
 
-	public void setStudentUsername(String studentUsername) {
-		this.studentUsername = studentUsername;
+	public void addStudentModule(Module m) {
+		this.studentModules.add(m);
 	}
 
-	public List<Course> getStudentCourses() {
-		return studentCourses;
+	public void listStudentModules() {
+		// TODO
 	}
-
-	public void setStudentCourses(List<Course> studentCourses) {
-		this.studentCourses = studentCourses;
-	}
-
-	public List<Module> getStudentModules() {
-		return studentModules;
-	}
-
-	public void setStudentModules(List<Module> studentModules) {
-		this.studentModules = studentModules;
-	}
-	
 }
