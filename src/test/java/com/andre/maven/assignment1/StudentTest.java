@@ -13,17 +13,6 @@ import org.junit.Test;
  */
 public class StudentTest {
 	
-////	Course Test variables
-//	private String courseName = "sampleCourseName";
-//	private List<Student> enrolledStudents = new ArrayList<Student>();
-//	private DateTime academicStartDate = new DateTime(2018,9,01,0,0);
-//	private DateTime academicEndDate = new DateTime(2019,5,01,0,0);
-//	
-////	Module Test variables
-//	private String moduleName = "sampleModuleName";
-//	private List<Student> entrolledStudentsModule = new ArrayList<Student>();
-//	private List<CourseProgramme> coursesAssociated = new ArrayList<CourseProgramme>();
-//	
 //	Student Test Variables
 	private String studentName = "sampleName";
 	private DateTime studentDOB = new DateTime(1997,10,03,0,0,0,0);
