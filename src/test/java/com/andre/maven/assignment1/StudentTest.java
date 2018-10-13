@@ -2,9 +2,6 @@ package com.andre.maven.assignment1;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.joda.time.DateTime;
 import org.junit.Test;
 
